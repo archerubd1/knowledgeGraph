@@ -1,0 +1,48 @@
+
+
+System Arch
+
+
+astraal-knowledge-graph/
+│
+├── database/
+│   ├── kg_schema.sql
+│   └── kg_indexes.sql
+│
+├── public_html/
+│   ├── config/
+│   │   └── db.php
+│   │
+│   ├── admin/
+│   │   ├── add_node.php
+│   │   ├── add_edge.php
+│   │   ├── node_list.php
+│   │   ├── edge_list.php
+│   │   └── graph_export.php
+│   │
+│   ├── api/
+│   │   ├── get_graph.php
+│   │   ├── get_neighbors.php
+│   │   ├── career_readiness.php
+│   │   └── skill_gap.php
+│   │
+│   ├── faculty/
+│   │   ├── skill_explorer.php
+│   │   ├── career_path_view.php
+│   │   └── learner_readiness_view.php
+│   │
+│   └── dashboard.php
+│
+├── python/
+│   ├── graph_traversal_engine.py
+│   ├── career_readiness_engine.py
+│   ├── skill_gap_engine.py
+│   ├── graph_validation_engine.py
+│   └── utils.py
+│
+├── cron/
+│   └── nightly_graph_validation.php
+│
+└── docs/
+    ├── HOW_TO_EXECUTE.md
+    └── GRAPH_GOVERNANCE.md
