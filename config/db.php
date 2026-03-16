@@ -1,12 +1,23 @@
 <?php
+// Database Configuration for Astraal LXP
 $host = "localhost";
-$user = "db_user";
-$pass = "db_password";
+$user = "root";
+$pass = "root"; // UwAmp default is 'root', if using XAMPP leave empty ""
 $db   = "astraal_lxp";
 
-$conn = new mysqli($host,$user,$pass,$db);
+// Create connection
+$conn = new mysqli($host, $user, $pass, $db);
 
+// Check connection
 if ($conn->connect_error) {
-    die("Database connection failed.");
+    // If connection fails, stop everything and show the error
+    die("Database connection failed: " . $conn->connect_error);
 }
-?>
+
+// Set charset to utf8mb4 to support all characters
+$conn->set_charset("utf8mb4");
+
+// Note: Do not close the PHP tag (
+ ?>
+
+ 
